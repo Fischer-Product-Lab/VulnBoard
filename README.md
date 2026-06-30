@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VulnBoard - Vulnerability Metrics Dashboard
+
+VulnBoard is a Fischer Product Lab portfolio product for executive vulnerability risk reporting. It turns synthetic vulnerability data into a board-ready operating view of exposure, SLA pressure, remediation trends, owner accountability, exceptions, and business-unit risk.
+
+**Status:** Local V1 complete, GitHub/Vercel publish pending  
+**Portfolio:** Fischer Product Lab  
+**Demo posture:** Read-only, synthetic data only, no production integrations
+
+## Portfolio Context
+
+Fischer Product Lab is Trevor Fischer's portfolio of cyber, AI governance, trust, and operational risk product demos. The suite is designed to show practical product thinking, security judgment, executive communication, and secure-by-design delivery.
+
+Related live demos:
+
+| Product | Focus | Demo |
+| --- | --- | --- |
+| VulnBoard | Vulnerability risk and executive remediation governance | Local, Vercel pending |
+| AgentOps | AI operations and governance | https://agentops-fpl.vercel.app/ |
+| TrustDesk | Trust, risk, assurance, and control evidence | https://trustdesk-fpl.vercel.app/ |
+
+## What VulnBoard Demonstrates
+
+- Executive decision framing for vulnerability management
+- High and critical finding visibility
+- SLA debt, aging, and overdue exposure
+- Remediation velocity and trend analysis
+- Owner and business-unit accountability
+- Application and infrastructure risk views
+- Risk acceptance and exception watchlists
+- Board-ready narrative and mock export actions
+
+## Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/` | Fischer Product Lab portfolio landing page |
+| `/dashboard` | Executive VulnBoard dashboard |
+| `/findings` | Findings queue and vulnerability table |
+| `/applications` | Highest-risk applications and assets |
+| `/business-units` | Business-unit risk contribution |
+| `/sla` | SLA health and aging buckets |
+| `/remediation` | Leadership commitments and remediation tracker |
+| `/exceptions` | Risk acceptance watchlist |
+| `/reports` | Executive memo and report actions |
+| `/about` | Demo overview, architecture, security posture, and docs |
+
+## Security Posture
+
+VulnBoard is intentionally safe for a public portfolio demo:
+
+- Synthetic mock data only
+- No customer, employer, or production data
+- No secrets, API keys, or environment variables
+- No file uploads
+- No write API routes or mutable workflows
+- No AI calls in V1
+- Static/read-only demo behavior
+
+See [SECURITY.md](SECURITY.md) and [docs/threat-model.md](docs/threat-model.md).
+
+## Tech Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Local typed synthetic data
+- npm scripts
+- Vercel-ready static build
 
 ## Getting Started
 
-First, run the development server:
+Run from the local project folder:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```powershell
+cd "C:\Users\t_fis\dev\Vulnerability Dashboard"
+npm install
+npm.cmd run dev -- -p 3001
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3001
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Verification
 
-## Learn More
+```powershell
+npm.cmd run lint
+npm.cmd run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Both should pass before publishing or deploying.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Product PRD](docs/vulnboard-prd.md)
+- [Portfolio Highlights](docs/highlights.md)
+- [Threat Model](docs/threat-model.md)
+- [Build Log](docs/BUILD_LOG.md)
+- [Architecture Notes](docs/architecture.md)
+- [Security Controls](docs/security-controls.md)
 
-## Deploy on Vercel
+## GitHub Publish Plan
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Target repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+Fischer-Product-Lab/vulnboard
+```
+
+Recommended flow:
+
+```powershell
+git status
+npm.cmd run lint
+npm.cmd run build
+git add -A
+git commit -m "feat: prepare VulnBoard V1 portfolio demo"
+gh repo create Fischer-Product-Lab/vulnboard --public --source . --remote origin --description "Executive vulnerability metrics dashboard. Read-only synthetic-data demo. Fischer Product Lab." --push
+```
+
+After the repo exists, import it into Vercel and update this README plus `docs/BUILD_LOG.md` with the production URL.
