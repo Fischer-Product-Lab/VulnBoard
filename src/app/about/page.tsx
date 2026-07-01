@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ProductShell } from "@/components/dashboard/product-shell";
 
 const docLinks = [
-  { href: "https://github.com/Fischer-Product-Lab/vulnboard/blob/main/docs/vulnboard-prd.md", label: "Product PRD" },
-  { href: "https://github.com/Fischer-Product-Lab/vulnboard/blob/main/docs/highlights.md", label: "Highlights" },
-  { href: "https://github.com/Fischer-Product-Lab/vulnboard/blob/main/docs/threat-model.md", label: "Threat Model" },
-  { href: "https://github.com/Fischer-Product-Lab/vulnboard/blob/main/docs/BUILD_LOG.md", label: "Build Log" },
+  { href: "https://github.com/Fischer-Product-Lab/VulnBoard/blob/main/docs/vulnboard-prd.md", label: "Product PRD" },
+  { href: "https://github.com/Fischer-Product-Lab/VulnBoard/blob/main/docs/highlights.md", label: "Highlights" },
+  { href: "https://github.com/Fischer-Product-Lab/VulnBoard/blob/main/docs/threat-model.md", label: "Threat Model" },
+  { href: "https://github.com/Fischer-Product-Lab/VulnBoard/blob/main/docs/BUILD_LOG.md", label: "Build Log" },
 ];
 
 export default function AboutPage() {

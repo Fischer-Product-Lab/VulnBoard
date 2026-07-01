@@ -2,7 +2,9 @@
 
 VulnBoard is a Fischer Product Lab portfolio product for executive vulnerability risk reporting. It turns synthetic vulnerability data into a board-ready operating view of exposure, SLA pressure, remediation trends, owner accountability, exceptions, and business-unit risk.
 
-**Status:** Local V1 complete, GitHub/Vercel publish pending  
+**Status:** V1 live on Vercel and published to GitHub  
+**Live demo:** https://vuln-board.vercel.app/  
+**Repository:** https://github.com/Fischer-Product-Lab/VulnBoard  
 **Portfolio:** Fischer Product Lab  
 **Demo posture:** Read-only, synthetic data only, no production integrations
 
@@ -14,7 +16,7 @@ Related live demos:
 
 | Product | Focus | Demo |
 | --- | --- | --- |
-| VulnBoard | Vulnerability risk and executive remediation governance | Local, Vercel pending |
+| VulnBoard | Vulnerability risk and executive remediation governance | https://vuln-board.vercel.app/ |
 | AgentOps | AI operations and governance | https://agentops-fpl.vercel.app/ |
 | TrustDesk | Trust, risk, assurance, and control evidence | https://trustdesk-fpl.vercel.app/ |
 
@@ -102,23 +104,15 @@ Both should pass before publishing or deploying.
 - [Architecture Notes](docs/architecture.md)
 - [Security Controls](docs/security-controls.md)
 
-## GitHub Publish Plan
+## Repository And Deployment
 
-Target repository:
+- Repository: https://github.com/Fischer-Product-Lab/VulnBoard
+- Live demo: https://vuln-board.vercel.app/
+- Deployment source: Vercel import from the GitHub `main` branch
 
-```text
-Fischer-Product-Lab/vulnboard
-```
-
-Recommended flow:
+Recommended pre-publish checks for future changes:
 
 ```powershell
-git status
 npm.cmd run lint
 npm.cmd run build
-git add -A
-git commit -m "feat: prepare VulnBoard V1 portfolio demo"
-gh repo create Fischer-Product-Lab/vulnboard --public --source . --remote origin --description "Executive vulnerability metrics dashboard. Read-only synthetic-data demo. Fischer Product Lab." --push
 ```
-
-After the repo exists, import it into Vercel and update this README plus `docs/BUILD_LOG.md` with the production URL.

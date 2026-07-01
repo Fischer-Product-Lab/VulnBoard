@@ -2,6 +2,8 @@
 
 ## Product Summary
 
+**Live demo:** https://vuln-board.vercel.app/
+
 VulnBoard is an executive-facing vulnerability metrics dashboard for a fictional enterprise security organization. It helps security leaders, BISOs, product owners, application teams, infrastructure teams, GRC stakeholders, and executives understand where vulnerability risk is concentrated and where leadership intervention is needed.
 
 ## Portfolio Goal

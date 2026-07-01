@@ -4,6 +4,8 @@
 
 VulnBoard turns vulnerability management data into an executive operating dashboard for remediation decisions, owner accountability, SLA pressure, and business risk visibility.
 
+**Live demo:** https://vuln-board.vercel.app/
+
 ## Why It Matters
 
 Security leaders rarely need more raw vulnerability data. They need decision-quality signals: what changed, what is overdue, where risk is concentrated, who owns it, and what leadership action is required.

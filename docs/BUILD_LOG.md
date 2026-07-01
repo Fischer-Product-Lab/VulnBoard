@@ -7,8 +7,8 @@
 | Product | VulnBoard |
 | Portfolio | Fischer Product Lab |
 | Local path | `C:\Users\t_fis\dev\Vulnerability Dashboard` |
-| GitHub repo | Pending: `Fischer-Product-Lab/vulnboard` |
-| Vercel URL | Pending |
+| GitHub repo | https://github.com/Fischer-Product-Lab/VulnBoard |
+| Vercel URL | https://vuln-board.vercel.app/ |
 | Branch | `main` expected |
 | Data posture | Synthetic only |
 | Runtime posture | Read-only demo |
@@ -68,13 +68,12 @@ Before public launch:
 - Commit `.github/workflows/codeql.yml`
 - Enable Dependabot alerts and automated security fixes
 - Verify secret scanning/push protection
-- Protect `main` branch
+- Protect `main` branch after the initial portfolio publish
 - Use PR-based changes after initial publish
 
-## Vercel Plan
+## Vercel Deployment
 
-1. Push repo to `Fischer-Product-Lab/vulnboard`.
-2. Import repo in Vercel.
-3. Use default Next.js settings.
-4. Configure no environment variables for V1.
-5. Update README, PRD, highlights, and this build log with the live URL.
+- Production URL: https://vuln-board.vercel.app/
+- Deployment source: GitHub `main` branch imported into Vercel
+- Framework settings: default Next.js configuration
+- Environment variables: none required for V1
