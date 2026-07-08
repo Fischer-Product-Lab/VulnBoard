@@ -17,6 +17,7 @@ This repository contains a public portfolio application intended to demonstrate 
 - No authentication, authorization, or admin workflow in V1
 - No AI calls or model integrations in V1
 - Read-only static/demo behavior
+- Security response headers are applied globally through `next.config.ts`: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy. The CSP keeps `'unsafe-inline'` for scripts and styles because Next.js injects inline scripts and chart styling requires inline styles in this read-only static demo; nonce middleware was intentionally not added.
 
 ## Out of Scope
 
@@ -40,3 +41,7 @@ If you discover a security concern in this demo, include:
 ## Data Handling
 
 All data in this app should remain synthetic. Do not paste real CVEs tied to private environments, scanner exports, tickets, hostnames, IP addresses, user details, or proprietary control evidence into the repo or app.
+
+## Accepted Risks
+
+- The moderate PostCSS advisory `GHSA-qx2v-qp2m-jg93` is accepted for V1 because it is reported transitively inside Next.js build-time tooling for a read-only static site. The available `npm audit fix` path would require a breaking Next.js downgrade, so the risk is documented rather than downgraded away.
