@@ -35,7 +35,8 @@ Related live demos:
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Fischer Product Lab portfolio landing page |
+| `/` | Cinematic VulnBoard marketing landing |
+| `/demo` | Working executive dashboard (same product as `/dashboard`) |
 | `/dashboard` | Executive VulnBoard dashboard |
 | `/findings` | Findings queue and vulnerability table |
 | `/applications` | Highest-risk applications and assets |
