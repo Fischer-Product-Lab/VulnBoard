@@ -39,6 +39,12 @@ export function LandingPage() {
             <Link href="/apps/hit-me" className="marketing-type-meta marketing-header-link">
               Hit Me
             </Link>
+            <Link
+              href="/apps/fairway-frenzy"
+              className="marketing-type-meta marketing-header-link"
+            >
+              Fairway
+            </Link>
             <Link href="/work/agentic-authority-model" className="marketing-type-meta marketing-header-link">
               Authority model
             </Link>
@@ -117,6 +123,25 @@ export function LandingPage() {
             </div>
             <Link href="/apps/hit-me" className="marketing-cta-secondary marketing-case-action">
               Enter the back room
+            </Link>
+          </section>
+
+          <section className="marketing-case" aria-labelledby="marketing-fairway-title">
+            <div>
+              <p className="marketing-type-meta marketing-gold">From the game studio</p>
+              <h2 id="marketing-fairway-title" className="marketing-type-title">
+                Golf six worlds, master 108 handcrafted holes, and keep the whole tour in your pocket.
+              </h2>
+              <p className="marketing-type-body marketing-case-copy">
+                Fairway Frenzy is premium offline arcade golf with a fast three-tap swing, four ways to
+                play, a full career, and no ads or in-app purchases.
+              </p>
+            </div>
+            <Link
+              href="/apps/fairway-frenzy"
+              className="marketing-cta-secondary marketing-case-action"
+            >
+              Tour the courses
             </Link>
           </section>
 
