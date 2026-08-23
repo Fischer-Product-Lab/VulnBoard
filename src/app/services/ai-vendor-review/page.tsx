@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./page.module.css";
+import WorkflowBaselineCalculator from "./workflow-baseline";
 
 export const metadata: Metadata = {
   title: "AI Vendor Review Acceleration Sprint",
@@ -122,8 +123,8 @@ export default function AiVendorReviewPage() {
               <a className={styles.primaryAction} href={fitCheckHref}>
                 Request a 20-minute fit check <span aria-hidden="true">→</span>
               </a>
-              <a className={styles.secondaryAction} href="#scope">
-                Review the scope
+              <a className={styles.secondaryAction} href="#baseline">
+                Build a private baseline
               </a>
             </div>
             <p className={styles.heroNote}>
@@ -194,6 +195,18 @@ export default function AiVendorReviewPage() {
               Open sample memo <span aria-hidden="true">↗</span>
             </a>
           </aside>
+        </section>
+
+        <section className={styles.section} id="baseline" aria-labelledby="baseline-title">
+          <div className={styles.sectionHeader}>
+            <p className={styles.eyebrow}>Private workflow baseline</p>
+            <h2 id="baseline-title">Put a dollar figure on the current workflow before you buy anything.</h2>
+            <p>
+              Use known figures or rough ranges to model today&apos;s active review and rework effort. The calculator
+              estimates current labor only; it does not assume the sprint will create savings or promise an outcome.
+            </p>
+          </div>
+          <WorkflowBaselineCalculator />
         </section>
 
         <section className={styles.section} aria-labelledby="timeline-title">

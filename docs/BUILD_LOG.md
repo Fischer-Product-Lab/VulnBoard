@@ -60,6 +60,36 @@ npm.cmd run build
 
 Both passed locally.
 
+## Revenue Funnel Publication Candidate — August 23, 2026
+
+The local `codex/revenue-funnel` branch preserves the cinematic portfolio and
+adds an approval-gated revenue layer: the AI Vendor Review Acceleration Sprint,
+its synthetic decision memo, the graduated-authority case study, and dedicated
+launch pages for Hit Me and Fairway Frenzy.
+
+The vendor-review service page now includes a browser-only current-workflow
+baseline. A prospect can model annual review effort, rework, and labor cost,
+compare the fixed $5,000 sprint fee without treating it as promised savings,
+and carry the self-entered figures into a fit-check email draft. The calculator
+has no submission endpoint, analytics event, persistence, production write, or
+external integration; nothing is sent unless the visitor chooses to send the
+email from their own mail app.
+
+Verification for this revision:
+
+```shell
+npm run test:revenue
+npm run lint
+npx tsc --noEmit
+npm run build
+```
+
+The four focused calculation and email-draft tests pass, the production build
+generates all 24 static routes, and desktop plus 390-pixel browser checks cover
+recalculation, reset, bounded inputs, zero-denominator copy, the generated
+draft, horizontal overflow, and browser-console errors. This is a local
+publication candidate only; no branch push or deployment is implied.
+
 ## GitHub Hardening Plan
 
 Before public launch:
