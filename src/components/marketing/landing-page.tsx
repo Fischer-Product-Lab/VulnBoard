@@ -36,6 +36,9 @@ export function LandingPage() {
             <span className="marketing-type-meta marketing-gold">Fischer Product Lab</span>
           </Link>
           <nav className="marketing-header-actions" aria-label="VulnBoard landing navigation">
+            <Link href="/apps/hit-me" className="marketing-type-meta marketing-header-link">
+              Hit Me
+            </Link>
             <Link href="/work/agentic-authority-model" className="marketing-type-meta marketing-header-link">
               Authority model
             </Link>
@@ -99,6 +102,22 @@ export function LandingPage() {
                 </li>
               ))}
             </ol>
+          </section>
+
+          <section className="marketing-case" aria-labelledby="marketing-game-title">
+            <div>
+              <p className="marketing-type-meta marketing-gold">From the game studio</p>
+              <h2 id="marketing-game-title" className="marketing-type-title">
+                Break blackjack on purpose, build a crooked deck, and beat the House in twelve rounds.
+              </h2>
+              <p className="marketing-type-body marketing-case-copy">
+                Hit Me is a premium offline iPhone roguelike with 31 relics, 14 boss dealers, five decks,
+                daily seeded runs, and no ads or in-app purchases.
+              </p>
+            </div>
+            <Link href="/apps/hit-me" className="marketing-cta-secondary marketing-case-action">
+              Enter the back room
+            </Link>
           </section>
 
           <section className="marketing-case" aria-labelledby="marketing-case-title">

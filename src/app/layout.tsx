@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fischer-product-lab-portfolio.vercel.app"),
   title: "VulnBoard | Fischer Product Lab",
   description:
     "Executive vulnerability metrics and remediation analytics portfolio demo.",
