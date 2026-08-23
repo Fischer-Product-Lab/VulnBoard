@@ -65,6 +65,12 @@ const timeline = [
 
 const proofProducts = [
   {
+    name: "Agentic authority model",
+    href: "/work/agentic-authority-model",
+    body: "How bounded implementation, independent review, and human release gates become one observable operating model.",
+    external: false,
+  },
+  {
     name: "TrustDesk",
     href: "https://trustdesk-fpl.vercel.app/",
     body: "How controls, evidence, and assurance can become a usable trust decision workspace.",
@@ -265,7 +271,7 @@ export default function AiVendorReviewPage() {
                   <strong>{product.name}</strong>
                   <p>{product.body}</p>
                   <span>
-                    Open live demo <span aria-hidden="true">→</span>
+                    Open portfolio proof <span aria-hidden="true">→</span>
                   </span>
                 </Link>
               ),

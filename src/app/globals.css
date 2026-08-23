@@ -1388,6 +1388,7 @@ body:has(.marketing) {
 .marketing-header,
 .marketing-hero,
 .marketing-method,
+.marketing-case,
 .marketing-service,
 .marketing-footer {
   width: min(72rem, calc(100% - 32px));
@@ -1551,6 +1552,33 @@ body:has(.marketing) {
 
 .marketing-step-copy {
   color: rgba(244, 239, 228, 0.7);
+}
+
+.marketing-case {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 28px;
+  padding: 34px 40px;
+  border-top: 1px solid var(--mk-hairline);
+  border-bottom: 1px solid var(--mk-hairline);
+}
+
+.marketing-case .marketing-type-title {
+  max-width: 46rem;
+  margin-top: 12px;
+}
+
+.marketing-case-copy {
+  max-width: 46rem;
+  margin-top: 18px;
+  color: rgba(244, 239, 228, 0.7);
+}
+
+.marketing-case-action {
+  flex: none;
+  white-space: nowrap;
 }
 
 .marketing-service {
@@ -1789,6 +1817,7 @@ body:has(.marketing) {
 }
 
 @media (max-width: 900px) {
+  .marketing-case,
   .marketing-service {
     grid-template-columns: 1fr;
     align-items: start;
@@ -1822,9 +1851,17 @@ body:has(.marketing) {
     text-align: right;
   }
 
+  .marketing-case,
+  .marketing-service {
+    padding: 28px 24px;
+  }
+
+  .marketing-case {
+    margin-bottom: 24px;
+  }
+
   .marketing-service {
     margin-bottom: 72px;
-    padding: 28px 24px;
   }
 }
 

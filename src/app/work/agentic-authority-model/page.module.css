@@ -1,0 +1,670 @@
+.page {
+  min-height: 100vh;
+  overflow-x: clip;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.heroBand {
+  position: relative;
+  isolation: isolate;
+}
+
+.heroBand::before {
+  position: absolute;
+  z-index: -1;
+  top: -24px;
+  right: 50%;
+  bottom: 0;
+  width: 100vw;
+  transform: translateX(50%);
+  background:
+    radial-gradient(circle at 82% 10%, rgba(215, 181, 109, 0.19), transparent 29rem),
+    linear-gradient(180deg, #0d1525, #151a2c);
+  content: "";
+}
+
+.topbar {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brandMark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(215, 181, 109, 0.7);
+  border-radius: 8px;
+  color: var(--gold-soft);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 0.96rem;
+}
+
+.brand small {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.backLink {
+  padding: 9px 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.62fr);
+  gap: 64px;
+  min-height: 530px;
+  padding: 82px 0 90px;
+  align-items: center;
+  color: #fff;
+}
+
+.heroCopy h1 {
+  max-width: 830px;
+  margin-bottom: 24px;
+  font-size: clamp(2.7rem, 6.5vw, 5.45rem);
+  letter-spacing: -0.05em;
+  line-height: 0.97;
+}
+
+.eyebrow {
+  margin: 0 0 13px;
+  color: var(--amber);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow,
+.finalCta .eyebrow {
+  color: var(--gold-soft);
+}
+
+.lede {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  line-height: 1.72;
+}
+
+.actions,
+.ctaActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  min-height: 48px;
+  padding: 13px 17px;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 7px;
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.primaryAction {
+  color: var(--navy);
+  background: var(--gold-soft);
+}
+
+.secondaryAction {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.primaryAction:hover,
+.secondaryAction:hover,
+.primaryAction:focus-visible,
+.secondaryAction:focus-visible {
+  transform: translateY(-2px);
+}
+
+.brand:focus-visible,
+.backLink:focus-visible,
+.primaryAction:focus-visible,
+.secondaryAction:focus-visible {
+  outline: 3px solid rgba(215, 181, 109, 0.58);
+  outline-offset: 3px;
+}
+
+.thesisCard {
+  padding: 26px;
+  border: 1px solid rgba(215, 181, 109, 0.42);
+  border-radius: 10px;
+  background:
+    linear-gradient(145deg, rgba(215, 181, 109, 0.12), transparent 48%),
+    rgba(255, 253, 247, 0.08);
+  box-shadow: 0 28px 70px rgba(4, 8, 17, 0.28);
+}
+
+.cardLabel {
+  margin-bottom: 18px;
+  color: var(--gold-soft);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cardQuestion {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+
+.cardRule {
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cardRule span,
+.cardRule strong {
+  display: block;
+}
+
+.cardRule span {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.cardRule strong {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.cardFootnote {
+  margin: 17px 0 0;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 0.7rem;
+  line-height: 1.55;
+}
+
+.section {
+  padding: 78px 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 32px;
+}
+
+.sectionHeader {
+  max-width: 810px;
+  margin-bottom: 36px;
+}
+
+.sectionHeader h2,
+.evidenceBand h2,
+.finalCta h2 {
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.sectionHeader > p:last-child,
+.finalCta p {
+  max-width: 740px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.flow li {
+  min-height: 188px;
+  padding: 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 253, 247, 0.65);
+}
+
+.stepNumber {
+  display: block;
+  margin-bottom: 32px;
+  color: var(--amber);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.flow strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.04rem;
+}
+
+.flow p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.matrix {
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow: 0 18px 42px rgba(20, 28, 46, 0.06);
+}
+
+.matrixHeader,
+.matrixRow {
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr 1.35fr 0.66fr;
+}
+
+.matrixHeader {
+  color: rgba(255, 255, 255, 0.72);
+  background: var(--navy);
+}
+
+.matrixHeader span {
+  padding: 14px 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.matrixRow > * {
+  min-width: 0;
+  padding: 17px 18px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.matrixRow strong {
+  font-size: 0.86rem;
+}
+
+.matrixRow > span:not(.level) {
+  color: var(--muted);
+}
+
+.level {
+  align-self: center;
+  justify-self: start;
+  margin: 12px 14px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.observe,
+.bounded {
+  color: #245b46;
+  background: rgba(47, 133, 100, 0.14);
+}
+
+.verify,
+.review {
+  color: #2e527b;
+  background: rgba(66, 107, 154, 0.14);
+}
+
+.checkpoint,
+.approve {
+  color: #72551f;
+  background: rgba(184, 138, 61, 0.17);
+}
+
+.human {
+  color: #843826;
+  background: rgba(184, 74, 53, 0.14);
+}
+
+.decisionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.decisionCard {
+  min-height: 244px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(255, 253, 247, 0.78);
+  box-shadow: 0 18px 40px rgba(20, 28, 46, 0.05);
+}
+
+.decisionCard > span {
+  display: inline-block;
+  margin-bottom: 44px;
+  color: var(--amber);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.decisionCard h3 {
+  margin-bottom: 10px;
+  font-size: 1.12rem;
+}
+
+.decisionCard p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.62;
+}
+
+.evidenceBand {
+  margin-top: 78px;
+  padding: 44px;
+  border: 1px solid rgba(215, 181, 109, 0.34);
+  border-radius: 10px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(215, 181, 109, 0.18), transparent 18rem),
+    var(--navy);
+  box-shadow: var(--shadow);
+}
+
+.evidenceBand h2 {
+  max-width: 850px;
+  color: #fff;
+}
+
+.evidenceBand .eyebrow {
+  color: var(--gold-soft);
+}
+
+.evidenceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 38px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.evidenceGrid div {
+  padding: 22px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.evidenceGrid strong {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--gold-soft);
+  font-size: 0.9rem;
+}
+
+.evidenceGrid p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.82rem;
+  line-height: 1.58;
+}
+
+.boundaryNote {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.finalCta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 40px;
+  margin-top: 20px;
+  padding: 78px 0 30px;
+  align-items: center;
+}
+
+.finalCta p {
+  max-width: 720px;
+}
+
+.ctaActions {
+  display: grid;
+  margin: 0;
+}
+
+.finalCta .secondaryAction {
+  color: var(--navy);
+  border-color: rgba(20, 28, 46, 0.22);
+}
+
+.footer {
+  display: flex;
+  margin-top: 46px;
+  padding-top: 28px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.footer span:first-child {
+  color: var(--ink);
+  font-weight: 850;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 66px 0 76px;
+  }
+
+  .thesisCard {
+    width: min(540px, 100%);
+  }
+
+  .flow,
+  .decisionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .matrixHeader {
+    display: none;
+  }
+
+  .matrixRow {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .matrixRow > * {
+    border-right: 1px solid var(--line);
+  }
+
+  .matrixRow > span:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .level {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .evidenceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .finalCta {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaActions {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(100% - 24px, 1180px);
+    padding-top: 14px;
+  }
+
+  .heroBand::before {
+    top: -14px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .backLink {
+    font-size: 0.76rem;
+  }
+
+  .hero {
+    padding-top: 54px;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(2.4rem, 13vw, 3.8rem);
+  }
+
+  .actions,
+  .ctaActions {
+    display: grid;
+    width: 100%;
+  }
+
+  .primaryAction,
+  .secondaryAction {
+    width: 100%;
+  }
+
+  .section {
+    padding: 58px 0;
+  }
+
+  .flow,
+  .decisionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow li,
+  .decisionCard {
+    min-height: 0;
+  }
+
+  .matrixRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 18px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .matrixRow > * {
+    padding: 5px 0;
+    border: 0;
+  }
+
+  .matrixRow > span:nth-child(3),
+  .level {
+    grid-column: 1;
+  }
+
+  .level {
+    grid-row: auto;
+    justify-self: start;
+    margin: 9px 0 0;
+    padding: 7px 9px;
+  }
+
+  .evidenceBand {
+    margin-top: 58px;
+    padding: 30px 22px;
+  }
+
+  .finalCta {
+    padding-top: 58px;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryAction,
+  .secondaryAction {
+    transition: none;
+  }
+}

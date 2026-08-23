@@ -36,6 +36,9 @@ export function LandingPage() {
             <span className="marketing-type-meta marketing-gold">Fischer Product Lab</span>
           </Link>
           <nav className="marketing-header-actions" aria-label="VulnBoard landing navigation">
+            <Link href="/work/agentic-authority-model" className="marketing-type-meta marketing-header-link">
+              Authority model
+            </Link>
             <Link href="/services/ai-vendor-review" className="marketing-type-meta marketing-header-link">
               AI vendor review sprint
             </Link>
@@ -96,6 +99,22 @@ export function LandingPage() {
                 </li>
               ))}
             </ol>
+          </section>
+
+          <section className="marketing-case" aria-labelledby="marketing-case-title">
+            <div>
+              <p className="marketing-type-meta marketing-gold">Public case study</p>
+              <h2 id="marketing-case-title" className="marketing-type-title">
+                Give AI systems useful authority without giving away the release decision.
+              </h2>
+              <p className="marketing-type-body marketing-case-copy">
+                A sanitized operating model for bounded implementation, deterministic verification, independent
+                review, exact artifact identity, and explicit human gates before shared-state or public impact.
+              </p>
+            </div>
+            <Link href="/work/agentic-authority-model" className="marketing-cta-secondary marketing-case-action">
+              Inspect the authority model
+            </Link>
           </section>
 
           <section className="marketing-service" aria-labelledby="marketing-service-title">
