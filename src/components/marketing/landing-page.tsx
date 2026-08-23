@@ -35,9 +35,14 @@ export function LandingPage() {
             <span className="marketing-type-body marketing-brand-name">VulnBoard</span>
             <span className="marketing-type-meta marketing-gold">Fischer Product Lab</span>
           </Link>
-          <Link href="/demo" className="marketing-type-meta marketing-header-link">
-            Open the demo
-          </Link>
+          <nav className="marketing-header-actions" aria-label="VulnBoard landing navigation">
+            <Link href="/services/ai-vendor-review" className="marketing-type-meta marketing-header-link">
+              AI vendor review sprint
+            </Link>
+            <Link href="/demo" className="marketing-type-meta marketing-header-link">
+              Open the demo
+            </Link>
+          </nav>
         </header>
 
         <main className="marketing-main">
@@ -91,6 +96,22 @@ export function LandingPage() {
                 </li>
               ))}
             </ol>
+          </section>
+
+          <section className="marketing-service" aria-labelledby="marketing-service-title">
+            <div>
+              <p className="marketing-type-meta marketing-gold">Available engagement</p>
+              <h2 id="marketing-service-title" className="marketing-type-title">
+                Turn one recurring vendor-review workflow into a measurable, human-controlled pilot decision.
+              </h2>
+              <p className="marketing-type-body marketing-service-copy">
+                A fixed-scope, 10-business-day sprint for TPRM, GRC, procurement risk, and AI governance teams.
+                The first two qualified design-partner engagements are $5,000.
+              </p>
+            </div>
+            <Link href="/services/ai-vendor-review" className="marketing-cta-primary marketing-service-action">
+              Review the sprint
+            </Link>
           </section>
         </main>
 

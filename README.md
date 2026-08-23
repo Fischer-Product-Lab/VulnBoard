@@ -38,6 +38,7 @@ Related live demos:
 | `/` | Cinematic VulnBoard marketing landing |
 | `/demo` | Working executive dashboard (same product as `/dashboard`) |
 | `/dashboard` | Executive VulnBoard dashboard |
+| `/services/ai-vendor-review` | Fixed-scope AI Vendor Review Acceleration Sprint |
 | `/findings` | Findings queue and vulnerability table |
 | `/applications` | Highest-risk applications and assets |
 | `/business-units` | Business-unit risk contribution |

@@ -1388,6 +1388,7 @@ body:has(.marketing) {
 .marketing-header,
 .marketing-hero,
 .marketing-method,
+.marketing-service,
 .marketing-footer {
   width: min(72rem, calc(100% - 32px));
   margin-inline: auto;
@@ -1419,6 +1420,12 @@ body:has(.marketing) {
 
 .marketing-header-link:hover {
   color: var(--mk-gold);
+}
+
+.marketing-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .marketing-main {
@@ -1544,6 +1551,35 @@ body:has(.marketing) {
 
 .marketing-step-copy {
   color: rgba(244, 239, 228, 0.7);
+}
+
+.marketing-service {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 96px;
+  padding: 40px;
+  border: 1px solid rgba(196, 163, 90, 0.32);
+  background:
+    radial-gradient(circle at 88% 0%, rgba(196, 163, 90, 0.12), transparent 34%),
+    rgba(244, 239, 228, 0.025);
+}
+
+.marketing-service .marketing-type-title {
+  max-width: 46rem;
+  margin-top: 12px;
+}
+
+.marketing-service-copy {
+  max-width: 46rem;
+  margin-top: 18px;
+  color: rgba(244, 239, 228, 0.7);
+}
+
+.marketing-service-action {
+  flex: none;
+  white-space: nowrap;
 }
 
 .marketing-footer {
@@ -1753,12 +1789,42 @@ body:has(.marketing) {
 }
 
 @media (max-width: 900px) {
+  .marketing-service {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
   .product-window-body {
     grid-template-columns: 1fr;
   }
 
   .product-window-rail {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .marketing-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .marketing-brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .marketing-header-actions {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    gap: 10px;
+    text-align: right;
+  }
+
+  .marketing-service {
+    margin-bottom: 72px;
+    padding: 28px 24px;
   }
 }
 
