@@ -179,21 +179,31 @@ export default function AiVendorReviewPage() {
           </div>
           <aside className={styles.sampleProof} aria-labelledby="sample-proof-title">
             <div>
-              <p className={styles.sampleLabel}>Synthetic sample output</p>
-              <h3 id="sample-proof-title">Inspect the decision memo before a fit call.</h3>
+              <p className={styles.sampleLabel}>Buyer-ready scope + synthetic proof</p>
+              <h3 id="sample-proof-title">Review the scope and sample decision artifact before a fit call.</h3>
               <p>
-                This six-page example shows the recommendation, evidence gaps, authority boundary, pilot thresholds,
-                stop conditions, and transparent economics. Every company, metric, finding, and outcome is fictional.
+                The one-page scope summarizes the fixed fee, fit, deliverables, 10-day cadence, and non-negotiable
+                boundaries. The six-page memo shows the decision artifacts using fictional inputs and outcomes.
               </p>
             </div>
-            <a
-              className={styles.sampleLink}
-              href="/samples/ai-vendor-review-decision-memo.pdf"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Open sample memo <span aria-hidden="true">↗</span>
-            </a>
+            <div className={styles.sampleActions}>
+              <a
+                className={styles.sampleLink}
+                href="/samples/ai-vendor-review-sprint-one-pager.pdf"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Open one-page scope <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className={`${styles.sampleLink} ${styles.sampleLinkSecondary}`}
+                href="/samples/ai-vendor-review-decision-memo.pdf"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Open sample memo <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </aside>
         </section>
 
