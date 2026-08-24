@@ -183,7 +183,7 @@ export default function FairwayFrenzyPage() {
                 priority
               />
             </div>
-            <figcaption>Captured from the verified iPhone Release candidate</figcaption>
+            <figcaption>Captured from the current game build</figcaption>
           </figure>
         </section>
 
