@@ -117,3 +117,20 @@ Recommended pre-publish checks for future changes:
 npm.cmd run lint
 npm.cmd run build
 ```
+
+## Local product-experience refresh
+
+The findings workspace now supports searchable, shareable URL filters, deterministic
+priority ordering, and inline evidence review. Example: `/findings?severity=Critical&sla=Overdue`.
+The dashboard and `/demo` use the same queue. On narrow screens, the queue becomes a
+readable card list and product navigation is a native disclosure menu.
+
+All eight sample findings and portfolio aggregates remain synthetic. The sample
+queue is separate from aggregate metrics. Reporting-period controls update the
+executive brief, operating signals, and trend only; other views retain the fixed
+June 2026 scenario. Refresh does not imply a live data connection.
+
+Run `npm test`, `npm run lint`, `npx tsc --noEmit`, and `npm run build` before review.
+The unit and server-rendered component tests use Node's built-in test runner and
+the existing TypeScript development dependency. Real-browser responsive and
+interaction checks are still required before publication.
