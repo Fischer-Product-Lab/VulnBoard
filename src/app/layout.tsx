@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { shareMetadata, siteOrigin } from "@/lib/share-metadata";
 import "./globals.css";
 
 const geist = Geist({
@@ -15,9 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VulnBoard | Fischer Product Lab",
-  description:
-    "Executive vulnerability metrics and remediation analytics portfolio demo.",
+  metadataBase: siteOrigin,
+  ...shareMetadata(
+    "VulnBoard | Fischer Product Lab",
+    "A read-only portfolio demo of executive vulnerability risk and remediation. All data is synthetic.",
+  ),
 };
 
 export default function RootLayout({

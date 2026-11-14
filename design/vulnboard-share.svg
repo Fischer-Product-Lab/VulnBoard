@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="canvas" x2="1" y2="1">
+      <stop stop-color="#111f32"/>
+      <stop offset="1" stop-color="#070d17"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#canvas)"/>
+  <rect x="45" y="45" width="1110" height="540" rx="14" fill="none" stroke="#544738"/>
+  <g fill="#d7b77d" font-family="DejaVu Sans" font-size="21">
+    <text x="93" y="111" letter-spacing="4">FISCHER PRODUCT LAB</text>
+    <text x="93" y="536" letter-spacing="3">PORTFOLIO DEMO  /  SYNTHETIC DATA</text>
+  </g>
+  <text x="86" y="275" fill="#f4efe4" font-family="DejaVu Serif" font-size="110">VulnBoard</text>
+  <g fill="#e3e1dc" font-family="DejaVu Sans" font-size="36">
+    <text x="93" y="359">Vulnerability risk,</text>
+    <text x="93" y="405">ready for a decision.</text>
+  </g>
+  <path d="M726 123v361" stroke="#544738"/>
+  <g fill="#152438" stroke="#544738">
+    <rect x="766" y="145" width="342" height="90" rx="11"/>
+    <rect x="766" y="267" width="342" height="90" rx="11"/>
+    <rect x="766" y="389" width="342" height="90" rx="11"/>
+  </g>
+  <g fill="#d7b77d" font-family="DejaVu Sans" font-size="21">
+    <text x="797" y="199">01</text><text x="797" y="321">02</text><text x="797" y="443">03</text>
+  </g>
+  <g fill="#f4efe4" font-family="DejaVu Sans" font-size="25">
+    <text x="854" y="199">Prioritize exposure</text>
+    <text x="854" y="321">Find the owner</text>
+    <text x="854" y="443">Review evidence</text>
+  </g>
+</svg>

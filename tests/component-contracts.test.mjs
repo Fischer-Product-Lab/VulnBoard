@@ -96,3 +96,24 @@ test("whitespace-only search can still be reset", () => {
   assert.match(html, /0 active filters/);
   assert.doesNotMatch(html, /disabled=""[^>]*>Reset view/);
 });
+
+test("public landing names the portfolio workflow and provides two usable entry points", () => {
+  const html = render(
+    "src/components/marketing/landing-page.tsx",
+    "LandingPage",
+  );
+  assert.match(html, /Vulnerability risk,<br\/>ready for a decision/);
+  assert.match(html, /href="\/demo"[^>]*>Open executive dashboard/);
+  assert.match(html, /href="\/findings\?severity=Critical&amp;sla=Overdue"[^>]*>Inspect overdue criticals/);
+  assert.match(html, /No sign-in · Fictional June 2026 scenario/);
+});
+
+test("direct dashboard visitors receive the first action and reporting scope", () => {
+  const html = render(
+    "src/components/dashboard/vulnerability-dashboard.tsx",
+    "VulnerabilityDashboard",
+  );
+  assert.match(html, /aria-label="Start exploring VulnBoard"/);
+  assert.match(html, /href="\/findings\?severity=Critical&amp;sla=Overdue"[^>]*>Review sample findings/);
+  assert.match(html, /sample findings do not reconcile to the dashboard totals/);
+});

@@ -40,28 +40,32 @@ export function LandingPage() {
           </Link>
         </header>
 
-        <main className="marketing-main">
+        <main id="main-content" className="marketing-main">
           <section className="marketing-hero">
             <p className="marketing-type-meta marketing-gold marketing-rise">
-              Portfolio demonstration · read-only · synthetic data
+              Fischer Product Lab case study · read-only demo
             </p>
             <h1 className="marketing-type-display marketing-rise marketing-rise-delay-1">
-              Findings,
+              Vulnerability risk,
               <br />
-              into owned risk.
+              ready for a decision.
             </h1>
             <p className="marketing-type-body marketing-lede marketing-rise marketing-rise-delay-2">
-              Vulnerability data stays technical until someone names the owner, the SLA
-              debt, and the decision required this week.
+              See which vulnerabilities to escalate, who owns the fix, and what
+              evidence supports the decision. Built for security leaders and the teams
+              accountable for remediation.
             </p>
             <div className="marketing-cta marketing-rise marketing-rise-delay-3">
               <Link href="/demo" className="marketing-cta-primary">
-                Open the demo
+                Open executive dashboard
               </Link>
-              <a href="#how-it-decides" className="marketing-cta-secondary">
-                How it decides
-              </a>
+              <Link href="/findings?severity=Critical&sla=Overdue" className="marketing-cta-secondary">
+                Inspect overdue criticals
+              </Link>
             </div>
+            <p className="marketing-type-meta marketing-demo-note">
+              No sign-in · Fictional June 2026 scenario
+            </p>
           </section>
 
           <section
@@ -80,7 +84,7 @@ export function LandingPage() {
           <section id="how-it-decides" className="marketing-method">
             <p className="marketing-type-meta marketing-gold">How it decides</p>
             <h2 className="marketing-type-title">
-              Ownership, age, and concentration write the brief. Severity never gets the last word.
+              Who owns the risk, how long has it been open, and what needs a decision?
             </h2>
             <ol className="marketing-steps">
               {STEPS.map((step) => (

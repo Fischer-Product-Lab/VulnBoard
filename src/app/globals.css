@@ -1986,3 +1986,24 @@ body:has(.marketing) {
   html { scroll-behavior: auto; }
   .app-frame *, .app-frame *::before, .app-frame *::after { transition: none; animation: none; }
 }
+
+/* Portfolio entry and guided first action */
+.marketing-demo-note { margin: 16px 0 0; color: rgba(244, 239, 228, 0.76); }
+.marketing a:focus-visible { outline: 2px solid var(--mk-gold); outline-offset: 4px; }
+.demo-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 13px 16px;
+  margin: 4px 0 12px;
+  border: 1px solid #ddd9cd;
+  border-inline-start: 3px solid #af8a45;
+  border-radius: 9px;
+  background: #fffdf7;
+  color: #192632;
+  font-size: .84rem;
+}
+.demo-start p { margin: 3px 0 0; color: #495460; line-height: 1.5; }
+.demo-start .text-button { white-space: normal; text-align: center; }
